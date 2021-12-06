@@ -94,10 +94,11 @@ public class custom_order {
         System.out.println("Toppings: " + toppings);
         System.out.println("_________________________________________");
 
-        // DISPLAY COST AND SALES TAX
-        System.out.printf("The cost of your order is: $%.2f\n", totalCost+cost);
-        tax = (totalCost + cost) * TAX_RATE;
+        // DISPLAY TOTAL COST AND SALES TAX
+        totalCost += cost; // Adding Price of the cake
+        System.out.printf("The cost of your order is: $%.2f\n", totalCost);
+        tax = (totalCost) * TAX_RATE;
         System.out.printf("The tax is: $%.2f\n", tax);
-        System.out.printf("The total due is: $%.2f\n",(tax + totalCost + cost));
+        System.out.printf("The total due is: $%.2f\n",(tax + totalCost));
     }   
 }
